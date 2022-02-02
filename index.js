@@ -19,6 +19,7 @@ function sleep(ms) {
 
 bot.command("inform", async (ctx) => {
   let input = ctx.message.text.split(" ");
+  ctx.reply("Will send to pdf when paper will be uploaded");
   console.log(input);
   if (input.length >= 2) {
     if (!isNaN(input[1])) {
