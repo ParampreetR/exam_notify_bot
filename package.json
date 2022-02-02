@@ -1,0 +1,16 @@
+{
+  "name": "paper_bot",
+  "version": "1.0.0",
+  "description": "A bot written for help in exams",
+  "main": "index.js",
+  "author": "ParampreetR",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "axios": "^0.25.0",
+    "fastify": "^3.27.0",
+    "telegraf": "^4.6.0"
+  }
+}
