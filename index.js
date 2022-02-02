@@ -69,7 +69,7 @@ fastify.get("/", (req, res) => {
   res.send("Hello");
 });
 
-fastify.listen(process.env.PORT, (err, address) => {
+fastify.listen(process.env.PORT, "0.0.0.0", (err, address) => {
   if (err) {
     fastify.log.error(err);
     process.exit(1);
