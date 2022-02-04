@@ -5,6 +5,7 @@ const axios = require("axios");
 const https = require("https");
 const fs = require("fs");
 
+let paperFound = false;
 let refresh_rate = 5;
 let stop = false;
 const bot = new Telegraf("5282444761:AAFTF8INW4HRh0LEkM9BECE8hORvbMIqo8E", {
@@ -27,7 +28,7 @@ bot.command("inform", async (ctx) => {
       let url = `https://paper.puexam.in/${exam_code}.pdf`;
 
       stop = false;
-      while (true) {
+      while (!paperFound) {
         if (stop) {
           break;
         }
@@ -49,6 +50,7 @@ bot.command("inform", async (ctx) => {
                   .catch(function (error) {
                     console.log("Resource down");
                   });
+                paperFound = true;
               });
             });
 
